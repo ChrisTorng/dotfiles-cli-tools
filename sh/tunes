@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Streams audio-only playback via mpv, deferring to yt-dlp for URLs.
+# Usage: tunes <urls...>
+
 set -e
 set -u
 set -o pipefail

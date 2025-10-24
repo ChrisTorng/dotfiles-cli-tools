@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Prints clipboard contents with platform-specific fallbacks.
+# Usage: pasta
+
 set -e
 set -u
 

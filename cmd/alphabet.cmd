@@ -1,0 +1,3 @@
+@echo off
+echo abcdefghijklmnopqrstuvwxyz
+echo ABCDEFGHIJKLMNOPQRSTUVWXYZ

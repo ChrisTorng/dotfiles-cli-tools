@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Opens the target file in read-only mode using the configured editor.
+# Usage: view <file>
+
 set -e
 set -u
 set -o pipefail

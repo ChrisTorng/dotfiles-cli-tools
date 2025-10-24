@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Fetches the best available audio stream via yt-dlp.
+# Usage: getsong <url> [yt-dlp-args...]
+
 set -e
 set -u
 set -o pipefail

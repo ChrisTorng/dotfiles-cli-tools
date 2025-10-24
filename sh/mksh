@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Creates an executable bash script template at the given path and opens it in $EDITOR.
+# Usage: mksh <path>
+
 set -e
 set -u
 set -o pipefail

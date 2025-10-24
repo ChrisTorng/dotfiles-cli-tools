@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Spells the supplied words using the NATO phonetic alphabet.
+# Usage: nato <text...>
 
 DICTIONARY = {
   "a" => "Alfa",

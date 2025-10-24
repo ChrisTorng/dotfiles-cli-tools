@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Repackages an npm tarball with optimal gzip compression for size comparison.
+# Usage: npm-repack <package-name-or-directory>
+
 set -e
 set -u
 set -o pipefail

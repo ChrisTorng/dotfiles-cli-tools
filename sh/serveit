@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Starts a simple HTTP server in the current directory on the chosen port.
+# Usage: serveit [port]
+
 set -e
 set -u
 set -o pipefail

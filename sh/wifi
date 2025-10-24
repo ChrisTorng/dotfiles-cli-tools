@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Provides simple Wi-Fi status, toggling, and join helpers (primarily for macOS).
+# Usage: wifi <status|list|join|off|on|toggle|help> [args...]
+
 set -e
 set -u
 

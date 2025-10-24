@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Runs tree and highlights matches for a pattern within a directory.
+# Usage: treefind [pattern] [directory]
+
 set -e
 set -u
 set -o pipefail

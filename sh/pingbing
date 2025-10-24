@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Pings duckduckgo.com once to check connectivity.
+# Usage: pingbing
+
 set -e
 set -u
 

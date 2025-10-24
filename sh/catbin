@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Shows the contents of an executable found in your PATH using cat or bat.
+# Usage: catbin <command-name>
+
 set -e
 set -u
 

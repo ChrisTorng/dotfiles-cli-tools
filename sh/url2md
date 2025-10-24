@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Fetches a web page via jina.ai and outputs Markdown-formatted content.
+# Usage: url2md <url>
+
 set -e
 set -u
 set -o pipefail

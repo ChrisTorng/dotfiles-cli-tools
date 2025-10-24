@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Parses a URL into its component parts and prints them.
+# Usage: url <url>
+
 import argparse
 from urllib.parse import urlparse, parse_qsl
 

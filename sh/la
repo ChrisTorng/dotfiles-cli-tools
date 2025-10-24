@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Runs ls -a with color flags appropriate for the current platform.
+# Usage: la [ls-args...]
+
 set -e
 set -u
 
