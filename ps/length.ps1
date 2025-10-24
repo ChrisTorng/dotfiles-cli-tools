@@ -1,11 +1,11 @@
+#!/usr/bin/env pwsh
+# Counts the number of characters in the provided arguments.
+# Usage: length <text...>
+
 param(
+    [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$Text
 )
 
-if ($null -eq $Text -or $Text.Count -eq 0) {
-    $joined = ""
-} else {
-    $joined = [string]::Join(' ', $Text)
-}
-
-Write-Output ($joined.Length)
+$joined = if ($Text) { [string]::Join(' ', $Text) } else { '' }
+Write-Output $joined.Length
