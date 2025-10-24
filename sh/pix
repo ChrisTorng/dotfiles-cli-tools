@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Displays images in mpv, looping each frame indefinitely.
+# Usage: pix <image-files...>
+
 set -e
 set -u
 set -o pipefail

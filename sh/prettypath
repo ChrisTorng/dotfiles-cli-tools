@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Prints the PATH environment variable one directory per line.
+# Usage: prettypath
+
 set -e
 set -u
 

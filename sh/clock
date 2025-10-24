@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Continuously displays the current time using watch.
+# Usage: clock
+
 set -e
 set -u
 set -o pipefail

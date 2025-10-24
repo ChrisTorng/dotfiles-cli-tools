@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Extracts common archive formats into appropriately named directories.
+# Usage: extract <archive> [archives...]
+
 import argparse
 from pathlib import Path
 import sys

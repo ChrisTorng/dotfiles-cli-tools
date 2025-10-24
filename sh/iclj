@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
+# Starts a Leiningen Clojure REPL in the current project.
+# Usage: iclj
+
 exec lein repl

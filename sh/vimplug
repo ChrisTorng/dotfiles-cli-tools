@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Downloads vim-plug into the appropriate autoload directory if missing.
+# Usage: vimplug
+
 set -e
 set -u
 set -o pipefail

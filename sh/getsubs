@@ -1,4 +1,7 @@
 #!/usr/bin/env -S deno run --allow-run --allow-read --allow-write
+// Grabs YouTube subtitles as plain text by calling yt-dlp and parsing VTT data.
+// Usage: getsubs <url>
+
 import * as path from "jsr:@std/path";
 import * as webvttModule from "npm:webvtt-parser";
 

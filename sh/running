@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Lists running processes, optionally filtering by a case-insensitive pattern.
+# Usage: running [pattern]
+
 set -e
 set -u
 

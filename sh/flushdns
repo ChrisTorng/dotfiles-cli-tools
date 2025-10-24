@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Flushes the local DNS cache on supported systems (currently macOS).
+# Usage: flushdns
+
 set -e
 set -u
 

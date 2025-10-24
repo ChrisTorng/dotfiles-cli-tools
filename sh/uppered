@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Converts stdin to uppercase characters.
+# Usage: uppered < input
+
 set -e
 set -u
 set -o pipefail

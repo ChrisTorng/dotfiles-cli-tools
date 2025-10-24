@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Outputs the bytes of a file as a delimiter-separated list, optionally in hexadecimal.
+# Usage: bytedump <file> [--delimiter <sep>] [--hex]
+
 import argparse
 from pathlib import Path
 from sys import stdout

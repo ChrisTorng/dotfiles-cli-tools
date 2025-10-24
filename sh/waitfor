@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Prevents sleep while waiting for a PID to exit using platform tools.
+# Usage: waitfor <pid>
+
 set -e
 set -u
 set -o pipefail

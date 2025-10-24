@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Shows the current time and today's calendar with the current date highlighted.
+# Usage: rn
+
 set -e
 set -u
 

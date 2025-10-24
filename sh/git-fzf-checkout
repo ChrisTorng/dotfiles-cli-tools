@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Uses fzf to interactively select and check out a git branch.
+# Usage: git-fzf-checkout
+
 set -e
 set -u
 set -o pipefail

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Prints the lowercase and uppercase English alphabets for quick reference.
+# Usage: alphabet
+
 set -e
 set -u
 set -o pipefail

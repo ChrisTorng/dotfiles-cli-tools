@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Shortcut that forwards arguments to the snippets helper command.
+# Usage: snippet [args...]
+
 set -e
 set -u
 set -o pipefail

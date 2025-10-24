@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Re-encodes a video to H.264 with a chosen CRF for smaller output.
+# Usage: shrinkvid <input> <output> [crf]
+
 set -e
 set -u
 set -o pipefail

@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+# Sends a desktop notification using notify-send or macOS scripting as fallbacks.
+# Usage: notify [title] [message]
+
 require 'date'
 require 'json'
 

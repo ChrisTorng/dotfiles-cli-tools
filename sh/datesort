@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Suggests moves to organize files into year-based folders inferred from filenames.
+# Usage: datesort <root-directory>
+
 import argparse
 import re
 import sys

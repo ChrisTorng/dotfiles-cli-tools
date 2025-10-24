@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Updates package.json dependencies to their latest versions.
+# Usage: npm-update-dependencies
+
 set -e
 set -u
 set -o pipefail

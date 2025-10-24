@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Converts a CSV file into a Markdown table printed to stdout.
+# Usage: csv2md <file>
+
 import csv
 import argparse
 from pathlib import Path

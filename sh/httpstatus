@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Shows HTTP status codes and descriptions, optionally filtered by a pattern.
+# Usage: httpstatus [pattern]
+
 set -e
 set -u
 

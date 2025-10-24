@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Creates or opens a markdown note in ~/notes with an optional title or archive flag.
+# Usage: note [title] [--archive]
+
 import argparse
 import os
 from pathlib import Path

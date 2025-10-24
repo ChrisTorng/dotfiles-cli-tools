@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Wraps input in Markdown blockquote syntax while preserving blank lines.
+# Usage: markdownquote < input
+
 import sys
 
 for line in sys.stdin:

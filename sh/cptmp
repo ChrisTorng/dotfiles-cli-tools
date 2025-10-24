@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Creates a temporary file path, prints it, and copies it to the clipboard.
+# Usage: cptmp
+
 set -e
 set -u
 set -o pipefail

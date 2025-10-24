@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Runs git with the provided arguments, defaulting to git status.
+# Usage: g [git-args...]
+
 set -e
 set -u
 

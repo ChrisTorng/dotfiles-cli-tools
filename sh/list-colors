@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Displays the 0-255 ANSI color codes.
+# Usage: list-colors
+
 set -e
 set -u
 

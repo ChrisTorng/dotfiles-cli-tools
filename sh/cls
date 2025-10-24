@@ -1,2 +1,5 @@
 #!/usr/bin/env bash
+# Clears the current terminal screen.
+# Usage: cls
+
 exec clear
