@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Puts the computer to sleep using macOS or Linux commands.
+# Usage: sleepybear
+
 set -e
 set -u
 

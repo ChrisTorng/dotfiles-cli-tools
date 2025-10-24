@@ -1,4 +1,7 @@
 #!/usr/bin/env swift
+// Performs OCR on an image using Apple's Vision framework and prints the recognized text.
+// Usage: ocr <image-path>
+
 import Foundation
 import Vision
 

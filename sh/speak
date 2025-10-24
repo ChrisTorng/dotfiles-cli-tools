@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Speaks Markdown input aloud using say or espeak-ng if available.
+# Usage: speak < markdown
+
 set -e
 set -u
 set -o pipefail

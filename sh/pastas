@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Continuously prints clipboard changes until interrupted.
+# Usage: pastas
+
 set -e
 set -u
 set -o pipefail

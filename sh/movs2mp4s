@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Converts all .mov files in the current directory to .mp4 in parallel using ffmpeg.
+# Usage: movs2mp4s
+
 from concurrent.futures import ThreadPoolExecutor, wait
 import os
 import subprocess

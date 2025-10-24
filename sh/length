@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Counts the number of characters in the provided arguments.
+# Usage: length <text...>
+
 set -e
 set -u
 

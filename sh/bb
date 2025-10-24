@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Runs a command in the background while silencing stdout/stderr if launched from a terminal.
+# Usage: bb <command> [args...]
+
 set -e
 set -u
 

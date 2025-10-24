@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Generates a random numeric PIN of the requested length.
+# Usage: pingen [length]
+
 set -e
 set -u
 set -o pipefail

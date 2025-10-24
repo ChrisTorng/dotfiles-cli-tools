@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Reports your local and/or public IP address.
+# Usage: myip <local|l|global|g|gl|lg...>
+
 import argparse
 import socket
 from enum import Enum

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Plays a named sound effect from the configured effects directory using mpv.
+# Usage: sfx <effect-name>
+
 set -e
 set -u
 set -o pipefail

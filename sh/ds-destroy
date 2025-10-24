@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Recursively removes .DS_Store files in the current directory tree.
+# Usage: ds-destroy
+
 set -e
 set -u
 set -o pipefail

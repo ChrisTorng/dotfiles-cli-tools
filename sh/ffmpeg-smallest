@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Transcodes a media file to several formats and keeps the smallest result.
+# Usage: ffmpeg-smallest <input> <output-basename> <extensions...>
+
 from argparse import ArgumentParser
 from pathlib import Path
 from tempfile import TemporaryDirectory
