@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+#!/usr/bin/env python3
+"""Prints the Unicode character and name for a hexadecimal code point.
+
+Usage: u+ <hex-codepoint>
+"""
+
+import argparse
+import unicodedata
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("hex_number", type=str)
+    args = parser.parse_args()
+
+    as_int = int(args.hex_number, 16)
+    as_chr = chr(as_int)
+
+    print(as_chr)
+    print(unicodedata.name(as_chr))
+
+
+if __name__ == "__main__":
+    main()

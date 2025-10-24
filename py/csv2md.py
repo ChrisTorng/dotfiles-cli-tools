@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""Converts a CSV file into a Markdown table printed to stdout.
+
+Usage: csv2md <file>
+"""
+
+import csv
+import argparse
+from pathlib import Path
+
+
+def csv_to_markdown(csv_file: Path) -> None:
+    with open(csv_file, "r", encoding="utf-8") as file:
+        reader = csv.reader(file)
+
+        header = None
+
+        for row in reader:
+            if header is None:
+                header = row
+                print("| " + " | ".join(header) + " |")
+                print("|" + "---|" * len(header))
+            else:
+                padded_row = row + [""] * (len(header) - len(row))
+                print("| " + " | ".join(padded_row[: len(header)]) + " |")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Convert CSV to Markdown table")
+    parser.add_argument("csv_file", type=Path, help="Path to the CSV file")
+
+    args = parser.parse_args()
+    csv_to_markdown(args.csv_file)
+
+
+if __name__ == "__main__":
+    main()
