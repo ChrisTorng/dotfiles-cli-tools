@@ -30,7 +30,7 @@ For a narrative tour of many of the tools, see the author's post
 | extract | [sh](sh/extract) | [py](py/extract.py) | [ps1](ps/extract.ps1) | — | Extracts common archive formats into appropriately named directories. |
 | f | [sh](sh/f) | [py](py/f.py) | [ps1](ps/f.ps1) | — | Shortcut for grep that forwards all arguments. |
 | ffmpeg-smallest | [sh](sh/ffmpeg-smallest) | [py](py/ffmpeg_smallest.py) | [ps1](ps/ffmpeg-smallest.ps1) | — | Transcodes a media file to several formats and keeps the smallest result. |
-| flushdns | [sh](sh/flushdns) | [py](py/flushdns.py) | [ps1](ps/flushdns.ps1) | [cmd](cmd/flushdns.cmd) | Flushes the local DNS cache on supported systems (currently macOS). |
+| flushdns | [sh](sh/flushdns) | [py](py/flushdns.py) | [ps1](ps/flushdns.ps1) | [cmd](cmd/flushdns.cmd) | Flushes the local DNS cache using available system tools. |
 | g | [sh](sh/g) | [py](py/g.py) | [ps1](ps/g.ps1) | [cmd](cmd/g.cmd) | Runs git with the provided arguments, defaulting to git status. |
 | getpod | [sh](sh/getpod) | [py](py/getpod.py) | [ps1](ps/getpod.ps1) | [cmd](cmd/getpod.cmd) | Downloads audio from online sources via yt-dlp with podcast-friendly settings. |
 | getsong | [sh](sh/getsong) | [py](py/getsong.py) | [ps1](ps/getsong.ps1) | [cmd](cmd/getsong.cmd) | Fetches the best available audio stream via yt-dlp. |
@@ -80,7 +80,7 @@ For a narrative tour of many of the tools, see the author's post
 | serveit | [sh](sh/serveit) | [py](py/serveit.py) | [ps1](ps/serveit.ps1) | [cmd](cmd/serveit.cmd) | Starts a simple HTTP server in the current directory on the chosen port. |
 | sfx | [sh](sh/sfx) | [py](py/sfx.py) | [ps1](ps/sfx.ps1) | [cmd](cmd/sfx.cmd) | Plays a named sound effect from the configured effects directory using mpv. |
 | shrinkvid | [sh](sh/shrinkvid) | [py](py/shrinkvid.py) | [ps1](ps/shrinkvid.ps1) | — | Re-encodes a video to H.264 with a chosen CRF for smaller output. |
-| sleepybear | [sh](sh/sleepybear) | [py](py/sleepybear.py) | [ps1](ps/sleepybear.ps1) | [cmd](cmd/sleepybear.cmd) | Puts the computer to sleep using macOS or Linux commands. |
+| sleepybear | [sh](sh/sleepybear) | [py](py/sleepybear.py) | [ps1](ps/sleepybear.ps1) | [cmd](cmd/sleepybear.cmd) | Puts the computer to sleep using available system tools. |
 | snippet | [sh](sh/snippet) | [py](py/snippet.py) | [ps1](ps/snippet.ps1) | — | Shortcut that forwards arguments to the snippets helper command. |
 | snippets | [sh](sh/snippets) | [py](py/snippets.py) | [ps1](ps/snippets.ps1) | — | Outputs a stored snippet file from ~/.config/evanhahn-snippets. |
 | speak | [sh](sh/speak) | [py](py/speak.py) | [ps1](ps/speak.ps1) | [cmd](cmd/speak.cmd) | Speaks Markdown input aloud using say or espeak-ng if available. |

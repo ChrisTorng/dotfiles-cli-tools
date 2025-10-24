@@ -27,4 +27,11 @@ if ($systemdResolve) {
     exit $LASTEXITCODE
 }
 
-Write-Output 'not supported yet'
+$resolveCtl = Get-Command -Name 'resolvectl' -ErrorAction SilentlyContinue
+if ($resolveCtl) {
+    & 'sudo' $resolveCtl.Source 'flush-caches'
+    exit $LASTEXITCODE
+}
+
+Write-Error 'flushdns: no supported cache flush method found'
+
