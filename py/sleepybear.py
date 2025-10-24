@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Puts the computer to sleep using macOS or Linux commands.
+"""Puts the computer to sleep using macOS, Linux, or Windows commands.
 
 Usage: sleepybear
 """
@@ -21,6 +21,8 @@ def main() -> None:
         ], check=False)
     elif system == "Linux":
         subprocess.run(["systemctl", "suspend"], check=False)
+    elif system == "Windows":
+        subprocess.run(["rundll32.exe", "powrprof.dll,SetSuspendState", "0,1,0"], check=False)
     else:
         print("sleepybear: unsupported platform", file=sys.stderr)
         sys.exit(1)

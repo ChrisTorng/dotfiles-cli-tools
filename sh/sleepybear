@@ -1,12 +1,33 @@
 #!/usr/bin/env bash
-# Puts the computer to sleep using macOS or Linux commands.
+# Puts the computer to sleep using macOS, Linux, or Windows commands.
 # Usage: sleepybear
 
 set -e
 set -u
 
-if [[ "$(uname)" == 'Darwin' ]]; then
+uname_out="$(uname)"
+
+if [[ "$uname_out" == 'Darwin' ]]; then
   exec /usr/bin/osascript -e 'tell application "System Events" to sleep'
-else
-  systemctl suspend
+  exit 0
 fi
+
+if [[ "$uname_out" == 'Linux' ]]; then
+  exec systemctl suspend
+fi
+
+if [[ "$uname_out" == MINGW* ]] || [[ "$uname_out" == MSYS* ]] || [[ "$uname_out" == CYGWIN* ]]; then
+  if command -v rundll32.exe >/dev/null 2>&1; then
+    exec rundll32.exe powrprof.dll,SetSuspendState Sleep
+  fi
+
+  if command -v powershell.exe >/dev/null 2>&1; then
+    exec powershell.exe -NoLogo -NoProfile -Command "rundll32.exe powrprof.dll,SetSuspendState Sleep"
+  fi
+
+  echo 'sleepybear: no known sleep method for this platform' >&2
+  exit 1
+fi
+
+echo 'sleepybear: unsupported platform' >&2
+exit 1

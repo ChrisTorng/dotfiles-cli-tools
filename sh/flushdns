@@ -1,13 +1,54 @@
 #!/usr/bin/env bash
-# Flushes the local DNS cache on supported systems (currently macOS).
+# Flushes the local DNS cache on supported systems.
 # Usage: flushdns
 
-set -e
-set -u
+set -euo pipefail
 
-if [[ "$(uname)" == 'Darwin' ]]; then
+uname_out="$(uname)"
+
+if [[ "$uname_out" == 'Darwin' ]]; then
   sudo dscacheutil -flushcache
   sudo killall -HUP mDNSResponder
-else
-  echo 'not supported yet'
+  exit 0
 fi
+
+if [[ "$uname_out" == 'Linux' ]]; then
+  maybe_sudo() {
+    if command -v sudo >/dev/null 2>&1; then
+      sudo "$@"
+    else
+      "$@"
+    fi
+  }
+
+  if command -v systemd-resolve >/dev/null 2>&1; then
+    maybe_sudo systemd-resolve --flush-caches
+    exit 0
+  fi
+
+  if command -v resolvectl >/dev/null 2>&1; then
+    maybe_sudo resolvectl flush-caches
+    exit 0
+  fi
+
+  echo 'flushdns: no supported cache flush method found' >&2
+  exit 1
+fi
+
+if [[ "$uname_out" == MINGW* ]] || [[ "$uname_out" == MSYS* ]] || [[ "$uname_out" == CYGWIN* ]]; then
+  if command -v ipconfig >/dev/null 2>&1; then
+    ipconfig /flushdns
+    exit 0
+  fi
+
+  if command -v powershell.exe >/dev/null 2>&1; then
+    powershell.exe -NoLogo -NoProfile -Command "Clear-DnsClientCache" >/dev/null
+    exit 0
+  fi
+
+  echo 'flushdns: no supported cache flush method found' >&2
+  exit 1
+fi
+
+echo 'flushdns: not supported yet' >&2
+exit 1
