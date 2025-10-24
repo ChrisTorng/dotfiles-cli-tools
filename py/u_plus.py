@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#!/usr/bin/env python3
 """Prints the Unicode character and name for a hexadecimal code point.
 
 Usage: u+ <hex-codepoint>
