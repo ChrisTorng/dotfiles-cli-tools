@@ -2,13 +2,13 @@
 # Parses a URL into its component parts and prints them.
 # Usage: url.ps1 <url>
 
-Set-StrictMode -Version Latest
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
 param(
     [Parameter(Position = 0, Mandatory = $true)]
     [string]$Url
 )
+
+Set-StrictMode -Version Latest
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 try {
     $uri = [System.Uri]::new($Url)

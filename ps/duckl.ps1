@@ -45,8 +45,8 @@ try {
     Start-Process -FilePath $url | Out-Null
     return
 } catch {
-    if ($IsMacOS -and Invoke-BrowserCommand -CommandName 'open' -Argument $url) { return }
-    if ($IsLinux -and Invoke-BrowserCommand -CommandName 'xdg-open' -Argument $url) { return }
-    if ($IsWindows -and Invoke-BrowserCommand -CommandName 'start' -Argument $url) { return }
+    if ($IsMacOS -and (Invoke-BrowserCommand -CommandName 'open' -Argument $url)) { return }
+    if ($IsLinux -and (Invoke-BrowserCommand -CommandName 'xdg-open' -Argument $url)) { return }
+    if ($IsWindows -and (Invoke-BrowserCommand -CommandName 'start' -Argument $url)) { return }
     throw "Unable to open browser for $url"
 }

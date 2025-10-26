@@ -2,13 +2,13 @@
 # Prints the Unicode character and name for a hexadecimal code point.
 # Usage: u+.ps1 <hex-codepoint>
 
-Set-StrictMode -Version Latest
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
 param(
     [Parameter(Position = 0, Mandatory = $true)]
     [string]$HexNumber
 )
+
+Set-StrictMode -Version Latest
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 try {
     $codePoint = [Convert]::ToInt32($HexNumber, 16)

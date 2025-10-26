@@ -70,7 +70,7 @@ function Invoke-ClipboardUtility {
 if (Invoke-ClipboardUtility -CommandName 'pbcopy') { return }
 if (Invoke-ClipboardUtility -CommandName 'xclip' -Arguments @('-selection', 'clipboard')) { return }
 if (Invoke-ClipboardUtility -CommandName 'putclip') { return }
-if ($IsLinux -and Invoke-ClipboardUtility -CommandName 'wl-copy') { return }
-if ($IsWindows -and Invoke-ClipboardUtility -CommandName 'clip') { return }
+if ($IsLinux -and (Invoke-ClipboardUtility -CommandName 'wl-copy')) { return }
+if ($IsWindows -and (Invoke-ClipboardUtility -CommandName 'clip')) { return }
 
 throw "No supported clipboard utility available."

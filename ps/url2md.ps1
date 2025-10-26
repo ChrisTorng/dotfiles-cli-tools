@@ -2,13 +2,13 @@
 # Fetches a web page via jina.ai and outputs Markdown-formatted content.
 # Usage: url2md.ps1 <url>
 
-Set-StrictMode -Version Latest
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
 param(
     [Parameter(Position = 0, Mandatory = $true)]
     [string]$Url
 )
+
+Set-StrictMode -Version Latest
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $uri = "https://r.jina.ai/$Url"
 $headers = @{

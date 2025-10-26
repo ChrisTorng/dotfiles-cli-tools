@@ -2,13 +2,13 @@
 # Repeatedly runs a command until it succeeds.
 # Usage: tryna.ps1 <command> [args...]
 
-Set-StrictMode -Version Latest
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-
 param(
     [Parameter(ValueFromRemainingArguments = $true, Mandatory = $true)]
     [string[]]$Command
 )
+
+Set-StrictMode -Version Latest
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 $exe = $Command[0]
 $arguments = @()
