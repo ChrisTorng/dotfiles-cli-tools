@@ -1,1 +1,7 @@
+# Build artifacts
+bin/
+obj/
+# Dotnet test reports
+*.trx
+TestResults/
 __pycache__/
