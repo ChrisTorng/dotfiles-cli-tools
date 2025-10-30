@@ -1,0 +1,11 @@
+[package]
+name = "pasta"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Clipboard paste helper"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+clipboard-util = { path = "../clipboard-util" }
