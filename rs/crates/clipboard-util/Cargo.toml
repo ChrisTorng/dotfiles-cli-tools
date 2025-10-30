@@ -1,0 +1,10 @@
+[package]
+name = "clipboard-util"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Shared clipboard helpers for dotfiles CLI tools"
+
+[dependencies]
+anyhow = { workspace = true }
+arboard = { workspace = true }

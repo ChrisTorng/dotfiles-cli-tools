@@ -1,6 +1,8 @@
 # Build artifacts
 bin/
 obj/
+# Rust build artifacts
+rs/target/
 # Dotnet test reports
 *.trx
 TestResults/
