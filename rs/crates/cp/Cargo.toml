@@ -1,0 +1,11 @@
+[package]
+name = "cp"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Clipboard copy helper"
+
+[dependencies]
+anyhow = { workspace = true }
+clap = { workspace = true }
+clipboard-util = { path = "../clipboard-util" }
