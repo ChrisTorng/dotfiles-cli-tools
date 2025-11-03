@@ -6,7 +6,9 @@ permissions:
 on:
   push:
     branches: [main]
-    tags: ['v*']
+  create:
+    # only care about tag creation (not branch refs)
+    refs: ['refs/tags/v*']
   pull_request:
 
 jobs:
