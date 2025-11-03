@@ -6,9 +6,7 @@ permissions:
 on:
   push:
     branches: [main]
-  create:
-    # only care about tag creation (not branch refs)
-    refs: ['refs/tags/v*']
+    tags: ['v*']
   pull_request:
 
 jobs:
@@ -38,8 +36,12 @@ jobs:
         shell: bash
         run: |
           mkdir -p artifacts
-          cp target/release/cp${{ matrix.bin-ext }} artifacts/
-          cp target/release/pasta${{ matrix.bin-ext }} artifacts/
+          # Auto-collect all binaries (excluding .d files)
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            find target/release -maxdepth 1 -name "*.exe" -type f -exec cp {} artifacts/ \;
+          else
+            find target/release -maxdepth 1 -type f -executable ! -name "*.d" -exec cp {} artifacts/ \;
+          fi
 
       - uses: actions/upload-artifact@v4
         with:
@@ -64,11 +66,13 @@ jobs:
 
       - name: Create zip archives
         run: |
-          (cd linux && zip -r ../rs-tools-linux.zip *)
-          (cd windows && zip -r ../rs-tools-windows.zip *)
+          # Use repository name to generate zip file names so CI does not need per-repo edits
+          repo_name="${{ github.event.repository.name }}"
+          (cd linux && zip -r "../${repo_name}-linux.zip" *)
+          (cd windows && zip -r "../${repo_name}-windows.zip" *)
 
       - uses: softprops/action-gh-release@v1
         with:
           files: |
-            rs-tools-linux.zip
-            rs-tools-windows.zip
+            ${{ github.event.repository.name }}-linux.zip
+            ${{ github.event.repository.name }}-windows.zip
