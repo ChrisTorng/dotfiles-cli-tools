@@ -20,6 +20,11 @@ public sealed class ScenarioContext
         LastCommand = await _runner.RunAsync(scriptName, arguments, _cancellationToken);
     }
 
+    public async Task RunScriptWithInputAsync(string scriptName, string standardInput, params string[] arguments)
+    {
+        LastCommand = await _runner.RunAsync(scriptName, arguments, _cancellationToken, standardInput);
+    }
+
     public CommandResult RequireLastCommand()
     {
         return LastCommand ?? throw new InvalidOperationException("No command has been executed yet in this scenario.");

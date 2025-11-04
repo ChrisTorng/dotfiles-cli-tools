@@ -13,7 +13,7 @@ public sealed class ScriptRunner
         _layout = layout;
     }
 
-    public async Task<CommandResult> RunAsync(string scriptName, IReadOnlyList<string> arguments, CancellationToken cancellationToken)
+    public async Task<CommandResult> RunAsync(string scriptName, IReadOnlyList<string> arguments, CancellationToken cancellationToken, string? standardInput = null)
     {
         var scriptPath = Path.Combine(_layout.ShDirectory, scriptName);
         if (!File.Exists(scriptPath))
@@ -27,6 +27,7 @@ public sealed class ScriptRunner
             FileName = interpreter.Command,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
+            RedirectStandardInput = standardInput is not null,
             UseShellExecute = false,
             WorkingDirectory = _layout.RepoRoot,
         };
@@ -45,6 +46,12 @@ public sealed class ScriptRunner
 
         using var process = new Process { StartInfo = startInfo };
         process.Start();
+
+        if (standardInput is not null)
+        {
+            await process.StandardInput.WriteAsync(standardInput);
+            process.StandardInput.Close();
+        }
 
         var stdoutTask = process.StandardOutput.ReadToEndAsync(cancellationToken);
         var stderrTask = process.StandardError.ReadToEndAsync(cancellationToken);

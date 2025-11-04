@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Shows the current time and today's calendar with the current date highlighted.
 # Usage: rn
+# install cal if not available (e.g., sudo apt install ncal)
 
 set -e
 set -u

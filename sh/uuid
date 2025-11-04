@@ -1,6 +1,6 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env python3
 # Generates a random UUID v4 and prints it.
 # Usage: uuid
 
-require 'securerandom'
-print SecureRandom.uuid
+import uuid
+print(uuid.uuid4(), end='')
