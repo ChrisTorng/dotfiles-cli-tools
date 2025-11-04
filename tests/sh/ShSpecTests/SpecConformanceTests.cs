@@ -48,8 +48,8 @@ public sealed class SpecConformanceTests
         }
         else if (result.Status == ScenarioStatus.Skipped)
         {
-            // 使用 xUnit 的 Skip 功能
-            throw new SkipException(result.Details ?? "測試被跳過");
+            // 使用 xUnit.SkippableFact 的 Skip 功能
+            throw new Xunit.SkipException(result.Details ?? "測試被跳過");
         }
     }
 
