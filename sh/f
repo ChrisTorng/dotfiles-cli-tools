@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Shortcut for grep that forwards all arguments.
+# Usage: f [grep-args...]
+
 set -e
 set -u
 set -o pipefail

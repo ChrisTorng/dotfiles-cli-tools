@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Downloads audio from online sources via yt-dlp with podcast-friendly settings.
+# Usage: getpod <url> [yt-dlp-args...]
+
 set -e
 set -u
 set -o pipefail

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copies the current working directory path to the clipboard.
+# Usage: cpwd
+
 set -e
 set -u
 set -o pipefail

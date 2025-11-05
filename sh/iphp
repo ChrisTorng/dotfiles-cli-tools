@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Launches the PHP interactive shell.
+# Usage: iphp
+
 set -e
 set -u
 set -o pipefail

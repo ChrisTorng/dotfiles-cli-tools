@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Repeatedly runs a command until it succeeds.
+# Usage: tryna <command> [args...]
+
 set -u
 
 "$@"

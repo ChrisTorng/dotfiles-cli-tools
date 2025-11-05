@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Opens DuckDuckGo in the browser, optionally searching for the provided terms.
+# Usage: duck [search terms...]
+
 set -e
 set -u
 set -o pipefail

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Starts the Python interactive interpreter.
+# Usage: ipy
+
 set -e
 set -u
 set -o pipefail

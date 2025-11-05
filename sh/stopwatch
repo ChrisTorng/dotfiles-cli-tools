@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Measures elapsed time by timing stdin until EOF.
+# Usage: stopwatch
+
 set -e
 set -u
 

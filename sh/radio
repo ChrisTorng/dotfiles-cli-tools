@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Streams a preset internet radio station with mpv.
+# Usage: radio <lofi|trance|salsa|kfai>
+
 set -e
 set -u
 set -o pipefail

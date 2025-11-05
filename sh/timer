@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Sleeps for the specified duration then plays a sound and sends a notification.
+# Usage: timer <seconds>
+
 set -e
 set -u
 set -o pipefail

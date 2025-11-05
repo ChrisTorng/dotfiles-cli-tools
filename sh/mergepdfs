@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Merges multiple PDFs into a single file using Ghostscript.
+# Usage: mergepdfs <output.pdf> <input.pdf...>
+
 set -e
 set -u
 

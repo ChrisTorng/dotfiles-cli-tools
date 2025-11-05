@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# Interactively kills processes by PID, name, or listening port with escalating signals.
+# Usage: murder <pid|:port|name> [more...]
 
 SIGNALS = [
   [15, 3],

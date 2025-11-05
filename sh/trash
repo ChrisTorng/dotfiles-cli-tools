@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Moves files to the system trash using Finder or gio depending on the platform.
+# Usage: trash <files...>
+
 set -e
 set -u
 set -o pipefail

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Opens the lightweight DuckDuckGo interface with an optional search query.
+# Usage: duckl [search terms...]
+
 set -e
 set -u
 set -o pipefail

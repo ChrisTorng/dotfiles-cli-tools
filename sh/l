@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Runs ls with the provided arguments.
+# Usage: l [ls-args...]
+
 set -e
 set -u
 set -o pipefail

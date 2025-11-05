@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Runs a shell command for each line of stdin by replacing {} in the template.
+# Usage: each "command {}" < input
+
 import argparse
 import re
 import shlex

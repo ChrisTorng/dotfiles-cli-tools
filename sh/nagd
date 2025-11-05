@@ -1,4 +1,7 @@
 #!/usr/bin/env ruby
+# Sends a desktop notification every few minutes as a reminder.
+# Usage: nagd
+
 require 'json'
 
 MINUTES = 20

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Pretty-prints JSON from stdin using node, jq, or cat as a fallback.
+# Usage: jsonformat < data.json
+
 set -e
 set -u
 set -o pipefail

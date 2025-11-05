@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Strips EXIF metadata from JPEG images using jhead.
+# Usage: removeexif <files...>
+
 set -e
 set -u
 

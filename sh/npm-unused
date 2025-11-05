@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+// Reports npm dependencies that are not required anywhere in the repository.
+// Usage: npm-unused
+
 const spawnSync = require('child_process').spawnSync
 const path = require('path')
 

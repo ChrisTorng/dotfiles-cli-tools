@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Prints today's date in YYYY-MM-DD format without a trailing newline.
+# Usage: hoy
+
 set -e
 set -u
 set -o pipefail

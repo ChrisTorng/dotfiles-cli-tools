@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Uses OpenAI Whisper to transcribe recordings or provided audio files.
+# Usage: transcribe [audio-paths...]
+
 import argparse
 from pathlib import Path
 from tempfile import mkstemp

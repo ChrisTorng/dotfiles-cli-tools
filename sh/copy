@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Copies stdin or a file's contents to the system clipboard with several platform fallbacks.
+# Usage: copy [file]
+
 set -e
 set -u
 
