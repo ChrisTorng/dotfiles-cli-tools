@@ -16,7 +16,7 @@ For a narrative tour of many of the tools, see the author's post
 | catbin | [sh](sh/catbin) | [py](py/catbin.py) | [ps1](ps/catbin.ps1) | [cmd](cmd/catbin.cmd) | — | Shows the contents of an executable found in your PATH using cat or bat. |
 | clock | [sh](sh/clock) | [py](py/clock.py) | [ps1](ps/clock.ps1) | — | — | Continuously displays the current time using watch. |
 | cls | [sh](sh/cls) | [py](py/cls.py) | [ps1](ps/cls.ps1) | [cmd](cmd/cls.cmd) | — | Clears the current terminal screen. |
-| copy/cp | [sh](sh/copy) | [py](py/cp.py) | [ps1](ps/cp.ps1) | [cmd](cmd/cp.cmd) | [rs](rs/crates/cp/src/main.rs) | Copies stdin or a file's contents to the system clipboard with several platform fallbacks. |
+| copy/cpy/cp | [sh](sh/copy) | [py](py/cp.py) | [ps1](ps/cp.ps1) | [cmd](cmd/cp.cmd) | [rs](rs/crates/cpy/src/main.rs) | Copies stdin or a file's contents to the system clipboard with several platform fallbacks. |
 | cptmp | [sh](sh/cptmp) | [py](py/cptmp.py) | [ps1](ps/cptmp.ps1) | [cmd](cmd/cptmp.cmd) | — | Creates a temporary file path, prints it, and copies it to the clipboard. |
 | cpwd | [sh](sh/cpwd) | [py](py/cpwd.py) | [ps1](ps/cpwd.ps1) | [cmd](cmd/cpwd.cmd) | — | Copies the current working directory path to the clipboard. |
 | csv2md | [sh](sh/csv2md) | [py](py/csv2md.py) | [ps1](ps/csv2md.ps1) | — | — | Converts a CSV file into a Markdown table printed to stdout. |

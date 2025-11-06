@@ -14,13 +14,14 @@ dotfiles-cli-tools/
 ├── py/                      # Python 3 implementations (95+ scripts)
 ├── ps/                      # PowerShell implementations (95+ scripts)
 ├── cmd/                     # Windows CMD implementations (34+ scripts)
-├── rs/                      # Rust implementations (workspace with 3 crates)
-│   ├── Cargo.toml          # Workspace configuration
-│   ├── Cargo.lock          # Locked dependencies
-│   └── crates/
-│       ├── clipboard-util/  # Shared clipboard utility library
-│       ├── cp/              # Copy-to-clipboard binary
-│       └── pasta/           # Paste-from-clipboard binary
+```
+rs/
+    ├── Cargo.toml       # Workspace config
+    └── crates/
+        ├── clipboard-util/ # Shared library
+        ├── cpy/             # Copy-to-clipboard binary
+        └── pasta/           # Paste-from-clipboard binary
+```
 ├── tests/                   # Test infrastructure
 │   ├── sh/ShSpecTests/      # C# xUnit test runner
 │   └── spec/                # BDD-style Gherkin specifications (90+ .feature files)
@@ -38,7 +39,11 @@ dotfiles-cli-tools/
 cd rs && cargo build --release --bins
 
 # Build specific binary
-cd rs && cargo build --release --bin cp
+To build a specific binary:
+
+```bash
+cd rs && cargo build --release --bin cpy
+```
 
 # Clean build artifacts
 cd rs && cargo clean
@@ -87,7 +92,7 @@ dotnet test --filter "copy" # Run tests for copy feature
 
 **Location:** `rs/Cargo.toml`
 
-**Workspace members:** `clipboard-util`, `cp`, `pasta`
+**Workspace members:** `clipboard-util`, `cpy`, `pasta`
 
 **Shared dependencies:**
 - `anyhow`: Error handling with context chains
@@ -96,7 +101,7 @@ dotnet test --filter "copy" # Run tests for copy feature
 
 **Architecture pattern:**
 - `clipboard-util`: Library crate providing shared clipboard operations via `set_contents()` and `get_contents()`
-- Binary crates (`cp`, `pasta`) depend on the shared library
+- Binary crates (`cpy`, `pasta`) depend on the shared library
 - Each binary has a `main.rs` with argument parsing and stdin/file handling
 
 ## Testing Architecture
@@ -184,7 +189,9 @@ Each tool is semantically identical across implementations but optimized for the
 - Linux Wayland: Uses `wl-copy`/`wl-paste`
 - Fallback: Temporary files in `/tmp/clipboard`
 
-Both `cp` (copy) and `pasta` (paste) binaries use this shared abstraction.
+Both `cpy` (copy) and `pasta` (paste) binaries use this shared abstraction.
+
+### Binary Crates
 
 ## Key Files and Concepts
 
@@ -208,6 +215,6 @@ Both `cp` (copy) and `pasta` (paste) binaries use this shared abstraction.
    - All `.feature` file scenarios pass
    - Implementation exists for at least one language (preferably matching existing implementations)
    - `README.md` is updated with tool description
-   - Commits reference the tool name (e.g., "feat(cp): add verbose mode")
+   - Commits reference the tool name (e.g., "feat(cpy): add verbose mode")
 
 6. **Release Artifacts:** Only Rust binaries are released as GitHub releases. Script-based tools rely on users adding `sh/`, `py/`, `ps/`, or `cmd/` directories to their PATH.
