@@ -10,6 +10,11 @@
 		"ghcr.io/devcontainers/features/python:1": {}
 	},
 
+	// Disable automatic Wayland socket mounting for Podman compatibility on Windows
+	"hostRequirements": {
+		"gpu": false
+	},
+
 	// Use 'mounts' to make the cargo cache persistent in a Docker Volume.
 	// "mounts": [
 	// 	{
